@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to right, #ebf4ce, #ffddaa, #ffbfa4, #ffa1c5, #fa99ff);
+        }
+
+        /* Navigation bar styles */
+        nav {
+            background-color: #ff6666;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-decoration: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 100px;
+        }
+
+        .nav-menu a {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: serif;
+            font-weight: bolder;
+            letter-spacing: 3px;
+        }
+
+        /* Main content styles */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            align-items: flex-start; 
+        }
+
+        .left-content {
+            flex: 1;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            padding: 70px;
+            font-size: 23px;
+        }
+
+        .right-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* Button styles */
+        .btn {
+            padding: 10px 20px;
+            background-color: #f87070;
+            color: whitesmoke;
+            border: none;
+            cursor: pointer;
+            width: 15vw;
+            height: 7vh;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #d26767;
+        }
+
+        /* Second page styles */
+        .second-page {
+            display: flex;
+            justify-content: center;
+            margin: 80px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .left-part {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .right-part {
+            width: 40%; 
+            background-color: #ff6666; 
+            padding: 20px;
+            text-align: left;
+        }
+
+    
+
+       .img1{
+        height: 36vh;
+        width: 26vw;
+       }
+
+       .img2{
+        height: 75vh;
+        width: 18vw;
+       }
+
+       .arrow-img{
+        width: 26px;
+        height: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+       }
+       
+
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .nav-menu {
+                display: none;
+
+            }
+
+            .menu-bars {
+                display: block;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .left-content {
+                margin-right: 0;
+            }
+            .second-page {
+                margin: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-part {
+                width: 100%;
+            }
+
+            .right-part {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .img1,
+            .img2 {
+                width: 50%;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- First Page -->
+    <div class="first-page">
+        <nav>
+            <div class="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">Order</a>
+                <a href="#">Food</a>
+                <a href="#">Restaurant</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Contact Us</a>
+            </div>
+            
+            <img src="./images/menu-bar.png" alt="Menu Bars" class="menu-bars" width="30" height="30" style="margin-left: 20px;">
+        </nav>
+        <div class="container">
+            <div class="left-content">
+                <h1 style="margin-bottom: 70px; letter-spacing: 4px;">LOREM IPSUM</h1>
+                <p style="color: #555;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                    id est vitae dolor rhoncus tristique. Maecenas metus quam,
+                    rhoncus euismod lorem in, sollicitudin viverra eros. Donec
+                    dictum luctus quam ut tristique. Curabitur nec faucibus purus.
+                    Quisque congue sem nec justo mollis, in tincidunt erat pretium.
+                    Sed pulvinar, massa ac porta viverra.
+                </p>
+                <button class="btn" onclick="toggleSecondPage()" style="margin-top: 70px;">Click Me</button>
+            </div>
+            <div class="right-content">
+                <img src="./images/pexels-robin-stickel-70497.jpg" alt="image" style="margin-left: 20px; width: 50vw; height: 100vh;" />
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Second Page -->
+    <div class="second-page">
+        <div class="container">
+            <!-- Left Part: Images -->
+            <div class="left-part">
+                <div style="display: flex; flex-direction: column;">
+                    <img src="./images/pexels-robin-stickel-70497.jpg" class="img1" alt="Image 1" style="margin: 7px;">
+                    <img src="./images/pexels-eva-bronzini-6141651.jpg" class="img1" alt="Image 2" style="margin: 7px;">
+                </div>
+                <div>
+                    <img src="./images/pexels-mister-mister-3434523.jpg" class="img2" alt="Image 3" style="margin: 7px;">
+                </div>
+                
+            </div>
+            <!-- Right Part: Content -->
+            <div class="right-part">
+                <div class="content">
+                    <h3 style="font-weight: lighter;">LOREM IPSUM</h3>
+                    <h1 style="font-size: 60px; letter-spacing: 5px;">LOREM IPSUM SET ADEMIR</h1>
+                    <div style="display: flex; flex-direction: row;">
+                        <h4 style="font-weight: lighter; cursor: pointer;" onclick="toggleFirstPage()">Click</h4>
+                        <img src="./images/icons8-arrow-30.png"  class="arrow-img" onclick="toggleFirstPage()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleSecondPage() {
+            document.querySelector('.first-page').style.display = 'none';
+            document.querySelector('.second-page').style.display = 'block';
+        }
+
+        function toggleFirstPage() {
+            document.querySelector('.second-page').style.display = 'none';
+            document.querySelector('.first-page').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
